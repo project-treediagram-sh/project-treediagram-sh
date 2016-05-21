@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <title>Shanghai Weather & AQI</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta http-equiv=X-UA-Compatible content="IE=edge" />
+    <link rel=stylesheet href=./css/bootstrap.css media=screen>
+    <link rel=stylesheet href=./css/custom.min.css>
+    <link rel="short icon" href=https://ky0n.xyz/favicon.png>
+    <meta name=description content="Shanghai Weather & AQI">
+    <!--[if lt IE 9]>
+<script src=../bower_components/html5shiv/dist/html5shiv.js></script>
+<script src=../bower_components/respond/dest/respond.min.js></script>
+<![endif]-->
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-70500040-1"]);
+        _gaq.push(["_setDomainName", "sh.ky0n.xyz"]);
+        _gaq.push(["_setAllowLinker", true]);
+        _gaq.push(["_trackPageview"]);
+        (function() {
+            var c = document.createElement("script");
+            c.type = "text/javascript";
+            c.async = true;
+            c.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var d = document.getElementsByTagName("script")[0];
+            d.parentNode.insertBefore(c, d)
+        })();
+    </script>
+    <script>
+        var url = window.location.href;
+        if (url.indexOf("https") < 0) {
+            url = url.replace("http:", "https:");
+            window.location.replace(url);
+        }
+    </script>
+    <style>
+    html * {
+            color: #000!important;
+            font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class=container>
+            <div class=navbar-header>
+                <a href=../ class=navbar-brand>Shanghai</a>
+                <button class=navbar-toggle type=button data-toggle=collapse data-target=#navbar-main>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+            </div>
+            <div class="navbar-collapse collapse" id=navbar-main>
+                <ul class="nav navbar-nav">
+                    <li class=dropdown>
+                        <a class=dropdown-toggle data-toggle=dropdown href=# id=themes>Data<span class=caret></span></a>
+                        <ul class=dropdown-menu aria-labelledby=themes>
+                            <li><a href=https://www.wunderground.com/q/locid:SHA;loctype:9>Weather Underground</a></li>
+                            <li><a href=https://forecast.io target="_blank">Forecast</a></li>
+                            <li><a href=https://aqicn.org/ target="_blank">World Air Quality Index</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailto:ky0ncheng@yahoo.co.jp?Subject=Bug Report with Shanghai Weather & AQI" target="_blank">Help</a>
+                    </li>
+                    <li>
+                        <a href=https://ky0n.xyz target="_blank">Blog</a>
+                    </li>
+                    <li>
+                        <a href=https://github.com/ky0ncheng/shanghai-weather-with-aqi target="_blank">Github</a>
+                    </li>
+                    <li class=dropdown>
+                        <a class=dropdown-toggle data-toggle=dropdown href=# id=themes>About<span class=caret></span></a>
+                        <ul class=dropdown-menu aria-labelledby=themes>
+                            <li><a href="#">This Page use UK weather format unit.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href=https://bootswatch.com/paper/ target=_blank>Built With Bootswatch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class=container>
+        <div class=page-header id=banner>
+            <h3 id=weather>Weather</h1>
+<div class=row>
+<iframe id=forecast_embed type=text/html frameborder=0 height=245 width=100% src="https://forecast.io/embed/#lat=31.0456&lon=121.3997&name=Downtown Shanghai&color=#000&units=uk"> </iframe>
+<br>
+<br>
+<iframe id=forecast_embed type=text/html frameborder=0 height=245 width=100% src="https://forecast.io/embed/#lat=31.1977&lon=121.3345&name=Shanghai Hongqiao International Airport (SHA)&color=#000&units=uk"> </iframe>
+<br>
+<br>
+<iframe id=forecast_embed type=text/html frameborder=0 height=245 width=100% src="https://forecast.io/embed/#lat=31.1485&lon=121.8032&name=Shanghai Pudong International Airport (PVG)&color=#000&units=uk"> </iframe>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=page-header id=banner>
+<h3 id=aqir>Air Quality Index</h1>
+<center><div class=row>
+<script type=text/javascript src='https://aqicn.org/?city=Shanghai/USconsulate&widgetscript&lang=en&size=xxl&id=573e08e8995972.90636372'></script><noscript>Get the <a href=https://aqicn.org/><b>Shanghai US Consulate</b> Air Quality.</a> widget! Not seeing a widget? (<a href=https://aqicn.org/>More info</a>)</noscript>
+</div>
+<center><div class=section-content><center>About the Air Quality Levels<br><br><style type=text/css>table.infoaqitable{line-height:1.5;background-color:white;max-width:1000px;width:95%;margin:0;border:1px solid black}table.infoaqitable td{padding:5px;font-size:15px;text-shadow:none}.aqiwtxt{color:#fff}.aqibtxt{color:#fff}@media only screen and (max-width:800px){table.infoaqitable{width:98%}}@media only screen and (max-width:420px){table.infoaqitable td:first-child{font-size:12px}}@media only screen and (max-width:420px){table.infoaqitable td:first-child{font-size:10px}table.infoaqitable td:nth-child(2){font-size:11px}table.infoaqitable.cautionary td:nth-child(3){font-size:70%}table.infoaqitable.cautionary td:nth-child(4){font-size:70%}table.infoaqitable.cautionary td{padding:1px}}</style><table class="infoaqitable cautionary"><thead><tr><td>AQI</td><td>Air Pollution Level</td><td>Health Implications</td><td>Cautionary Statement (for PM2.5)</td></tr></thead><tbody><tr style=background-color:#009966><td class=aqiwtxt nowrap=true>0 - 50</td><td class=aqiwtxt>Good</td><td class=aqiwtxt>Air quality is considered satisfactory, and air pollution poses little or no risk</td><td class=aqiwtxt>None</td></tr><tr style=background-color:#ffde33 class=aqibtxt><td class=aqibtxt nowrap=true>51 -100</td><td class=aqibtxt>Moderate</td><td class=aqibtxt>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td><td class=aqibtxt>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td></tr><tr style=background-color:#ff9933><td class=aqibtxt nowrap=true>101-150</td><td class=aqibtxt>Unhealthy for Sensitive Groups</td><td class=aqibtxt>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td><td class=aqibtxt>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td></tr><tr style=background-color:#cc0033><td class=aqiwtxt nowrap=true>151-200</td><td class=aqiwtxt>Unhealthy</td><td class=aqiwtxt>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td><td class=aqiwtxt>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td></tr><tr style=background-color:#660099><td class=aqiwtxt nowrap=true>201-300</td><td class=aqiwtxt>Very Unhealthy</td><td class=aqiwtxt>Health warnings of emergency conditions. The entire population is more likely to be affected.</td><td class=aqiwtxt>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td></tr><tr style=background-color:#7e0023><td class=aqiwtxt nowrap=true>300+</td><td class=aqiwtxt>Hazardous</td><td class=aqiwtxt>Health alert: everyone may experience more serious health effects</td><td class=aqiwtxt>Everyone should avoid all outdoor exertion</td></tr></tbody></table><br>To know more about Air Quality and Pollution, check the <a href=https://en.wikipedia.org/wiki/Air_quality  target="_blank">wikipedia Air Quality topic</a> or the <a href="http://www.airnow.gov/index.cfm?action=aqibasics.aqi" target="_blank">airnow guide to Air Quality and Your Health</a>.<br><br>For very useful health advices of Beijing Doctor Richard Saint Cyr MD, check <a href=http://www.myhealthbeijing.com/ target="_blank">www.myhealthbeijing.com</a> blog.<br><br></center></div></center>
+</div><center>
+<footer>
+<div class=row>
+<div class=col-lg-12>
+<ul class=list-unstyled>
+<li class=pull-right><a href=#top>Back to top</a></li>
+<li><a href="mailto:ky0ncheng@yahoo.co.jp?Subject=Bug Report with Shanghai Weather & AQI" target="_blank">Feedback</a></li>
+</ul>
+<script language=javascript type=text/javascript>function calcTime(x,w){var s=new Date();utc=s.getTime()+(s.getTimezoneOffset()*60000);var v=new Date(utc+(3600000*w));var d=new Date(utc);var p=v.getDate();var t=v.getMonth();var r=v.getYear();var o=v.getHours();var y=v.getMinutes();var u=v.getSeconds();if(r<1000){r+=1900}var z=new Array("January","February","March","April","May","June","July","August","September","October","November","December");var q=new Array("31","28","31","30","31","30","31","31","30","31","30","31");if(r%4==0){q=new Array("31","29","31","30","31","30","31","31","30","31","30","31")}if(r%100==0&&r%400!=0){q=new Array("31","28","31","30","31","30","31","31","30","31","30","31")}if(o>=24){o=o-24;p-=-1}if(o<0){o-=-24;p-=1}if(o<10){o=" "+o}if(y<10){y="0"+y}if(u<10){u="0"+u}if(p<=0){if(t==0){t=11;r-=1}else{t=t-1}p=q[t]}if(p>q[t]){p=1;if(t==11){t=0;r-=-1}else{t-=-1}}return x+o+":"+y}function worldClockZone(){document.getElementById("localutc").innerHTML=calcTime("UTC ","-0");document.getElementById("LAX").innerHTML=calcTime("LAX ","-7");document.getElementById("PVG").innerHTML=calcTime("PVG ","+8");document.getElementById("JFK").innerHTML=calcTime("JFK ","-4");setTimeout("worldClockZone()",1000)}window.onload=worldClockZone;</script>
+<p>< > with ❤ by <a href=https://ky0n.xyz  target="_blank">Ky0n Cheng</a></p>
+<p>Code released under the <a href=https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE  target="_blank">MIT License</a>.</p>
+<p>Based on <a href=http://getbootstrap.com  target="_blank">Bootstrap</a>. Icons from <a href=http://fortawesome.github.io/Font-Awesome/  target="_blank">Font Awesome</a>. Web fonts from <a href=http://www.google.com/webfonts  target="_blank">Google</a>.</p>
+<center><span id=localutc></span> · <span id=LAX></span> · <span id=PVG></span> · <span id=JFK></span><center>
+</div>
+</div>
+</footer>
+</div>
+<script src=https://cdn.bootcss.com/jquery/2.2.3/jquery.js></script>
+<script src=./js/bootstrap.min.js></script>
+<script src=./js/custom.js></script>
+</body>
+</html>
